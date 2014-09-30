@@ -1,4 +1,4 @@
 fuckit_commit
 =============
 
-SMS reminder for daily commit to GitHub
+Get SMS reminders to commit code daily and aim to beat your own commit streak!!! 
