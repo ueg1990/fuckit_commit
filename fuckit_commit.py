@@ -12,7 +12,7 @@ def send_sms():
     '''
     config = {'account_sid' : '', 'auth_token' : ''}
     client = TwilioRestClient(config['account_sid'], config['auth_token'])
-    message = client.messages.create(to="+15148871900", from_="+14387937890",
+    message = client.messages.create(to="", from_="",
                                      body="Hello there!")
 
 def main():
