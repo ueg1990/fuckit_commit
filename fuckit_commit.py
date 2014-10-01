@@ -4,27 +4,30 @@ The aim is to encourage user to code, commit and push to GitHub everyday
 '''
 
 import requests
+from twilio.rest import TwilioRestClient
 
-def set_configuration():
+def get_configuration():
     '''
     Set Twilio configuration
     '''
     pass
 
-def get_twilio_client():
+def get_twilio_client(config):
     '''
     Connect to Twilio Client
     '''
-    pass
+    return TwilioRestClient(config.account_sid, config.auth_token)
 
-def send_sms():
+def send_sms(client):
     '''
     Send SMS reminder
     '''
     pass
 
 def main():
-    pass
+    config = get_configuration()
+    client = get_configuration(config)
+    send_sms(client)
 
 if __name__ == "__main__":
     main()
