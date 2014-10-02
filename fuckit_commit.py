@@ -14,6 +14,11 @@ def send_sms():
     client = TwilioRestClient(config['account_sid'], config['auth_token'])
     message = client.messages.create(to="", from_="",
                                      body="Hello there!")
+def check_commit_activity():
+    '''
+    Check if there was any change in the commit history of the user
+    '''
+    return False
 
 def main():
     send_sms()
