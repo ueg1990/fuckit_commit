@@ -18,10 +18,13 @@ def check_commit_activity():
     '''
     Check if there was any change in the commit history of the user
     '''
+    get_recent_event = requests.get("https://api.github.com/users/ueg1990/events/public")
+    print get_recent_event.json()[0]['created_at']
     return False
 
 def main():
-    send_sms()
+    check_commit_activity()
+    # send_sms()
 
 if __name__ == "__main__":
     main()
