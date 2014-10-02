@@ -17,18 +17,17 @@ def send_sms():
                                      body="Hello there!")
 def check_commit_activity():
     '''
-    Check if there was any change in the commit history of the user
+    Check if there was any change in the commit history of the user. If date of 
+    latest event is the same as current date, commit was made, hence return True
+    else return False. Returning False triggers sending of an SMS reminder
     '''
-    get_recent_event = requests.get("https://api.github.com/users/ueg1990/events/public")
-    print datetime.strptime(get_recent_event.json()[0]['created_at'].split('T')[0], '%Y-%m-%d').date()
-    print date.today()
-    print datetime.strptime(get_recent_event.json()[0]['created_at'].split('T')[0], '%Y-%m-%d').date() ==  date.today()
-    print type(datetime.strptime(get_recent_event.json()[0]['created_at'].split('T')[0], '%Y-%m-%d').date()), type(date.today())
-    return False
+    get_recent_event = requests.get("https://api.github.com/users/%s/events/public" % '')
+    event_date =  datetime.strptime(get_recent_event.json()[0]['created_at'].split('T')[0], '%Y-%m-%d').date()
+    return event_date == date.today()
 
 def main():
-    check_commit_activity()
-    # send_sms()
+    if not check_commit_activity():
+        send_sms()
 
 if __name__ == "__main__":
     main()
