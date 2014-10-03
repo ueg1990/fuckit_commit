@@ -18,3 +18,8 @@ Using requirements.txt and pip, run the following command:
 Example command on crontab for SMS reminder every four hours everyday. 
 
     0 0,4,8,12,16,20 * * * cd /root/fuckit_commit/; python fuckit_commit.py
+
+Useful crontab commands:
+
+    Edit crontab: crontab -e
+    List cronjobs: crontab -l
