@@ -1,0 +1,7 @@
+{
+ 'twilio_sid' :  '',
+ 'twilio_auth_token' : '',
+ 'twilio_number_to' : '',
+ 'twilio_number_from' : '',
+ 'github_username' : '' 
+}

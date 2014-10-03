@@ -6,6 +6,7 @@ The aim is to encourage user to code, commit and push to GitHub everyday
 import requests
 from twilio.rest import TwilioRestClient
 from datetime import datetime, date
+import json
 
 def send_sms():
     '''
@@ -26,8 +27,12 @@ def check_commit_activity():
     return event_date == date.today()
 
 def main():
-    if not check_commit_activity():
-        send_sms()
+    with open('configuration.json') as f:
+	data = json.loads(f)
+    print data
+    print type(data)
+    #if not check_commit_activity():
+    #    send_sms()
 
 if __name__ == "__main__":
     main()
