@@ -23,3 +23,9 @@ Useful crontab commands:
 
     Edit crontab: crontab -e
     List cronjobs: crontab -l
+    
+##Tests
+
+To run tests:
+
+    python -m unittest tests
