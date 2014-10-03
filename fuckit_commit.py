@@ -5,8 +5,8 @@ The aim is to encourage user to code, commit and push to GitHub everyday
 To set up SMS reminders, user has to have a Twilio account and a GitHub
 username. From the Twilio account, the SID, auth_token, number to send from
 and number to send to are required. This twilio info and the github username
-can be filled in the configuration.json file. Once that is one, user can set
-up a cron job on his/her server
+can be filled in the configuration.json file. Once that is done, user can set
+up a cron job on his/her server for periodic SMS reminders
 '''
 
 import requests
