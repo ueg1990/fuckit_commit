@@ -1,6 +1,12 @@
 '''
 This module will send SMS reminders periodically, using Twilio.
 The aim is to encourage user to code, commit and push to GitHub everyday
+
+To set up SMS reminders, user has to have a Twilio account and a GitHub
+username. From the Twilio account, the SID, auth_token, number to send from
+and number to send to are required. This twilio info and the github username
+can be filled in the configuration.json file. Once that is one, user can set
+up a cron job on his/her server
 '''
 
 import requests
@@ -9,7 +15,7 @@ from datetime import datetime, date
 import json
 
 def get_config_info():
-    with open('configuration2.json') as f:
+    with open('configuration.json') as f:
 	data = json.load(f)
     return data
 
