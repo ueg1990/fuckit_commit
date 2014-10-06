@@ -29,3 +29,7 @@ Useful crontab commands:
 To run tests:
 
     python -m unittest tests
+    
+##Author
+
+Usman Ehtesham Gul - <uehtesham90@gmail.com>
